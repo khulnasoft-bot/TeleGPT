@@ -1,4 +1,4 @@
-# ChatGPT Telegram Bot: **GPT-4. Fast. No daily limits. Special chat modes**
+# TeleGPT : **GPT-4. Fast. No daily limits. Special chat modes**
 
 <br>
 
@@ -27,10 +27,6 @@ You can deploy your own bot, or use mine: [@telegpt](https://t.me/telegpt_khulna
 - Support of [ChatGPT API](https://platform.openai.com/docs/guides/chat/introduction)
 - List of allowed Telegram users
 - Track $ balance spent on OpenAI API
-
-<p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmM2ZWVjY2M4NWQ3ZThkYmQ3MDhmMTEzZGUwOGFmOThlMDIzZGM4YiZjdD1n/unx907h7GSiLAugzVX/giphy.gif" />
-</p>
 
 ---
 
