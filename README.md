@@ -1,9 +1,5 @@
 # ChatGPT Telegram Bot: **GPT-4. Fast. No daily limits. Special chat modes**
 
-<div align="center">
-<img src="https://raw.githubusercontent.com/khulnasoft-bot/telegpt/main/static/header.png" align="center" style="width: 100%" />
-</div>
-
 <br>
 
 <p align="center">
@@ -83,7 +79,6 @@ You can deploy your own bot, or use mine: [@telegpt](https://t.me/telegpt_khulna
 ## Contributors
 
 - Main contributor: @khulnasoft-bot
-- [Jadve AI](https://jadve.com).
 
 ## References
 

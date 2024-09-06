@@ -1,23 +1,24 @@
-FROM python:3.8-slim
+FROM python:3.8-slim-buster
 
-RUN \
-    set -eux; \
-    apt-get update; \
-    DEBIAN_FRONTEND="noninteractive" apt-get install -y --no-install-recommends \
-    python3-pip \
-    build-essential \
-    python3-venv \
-    ffmpeg \
-    git \
-    ; \
-    rm -rf /var/lib/apt/lists/*
+# Install necessary packages
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    ffmpeg git supervisor && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install -U pip && pip3 install -U wheel && pip3 install -U setuptools==59.5.0
+# Copy supervisord configuration
+COPY supervisord.conf /etc/supervisor/supervisord.conf
+
+# Set up environment
 COPY ./requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt && rm -r /tmp/requirements.txt
 
+# Copy the application code
 COPY . /code
 WORKDIR /code
 
-CMD ["bash"]
+# Expose necessary ports
+EXPOSE 8080 27017
 
+# Start supervisord
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]
